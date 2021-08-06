@@ -9,7 +9,7 @@ export class SummaryComponent  {
 @Input() stock: any;
 
 isNegative() {
-  if (this.stock && this.stock.change < 0) {
+  if(this.stock && this.stock.change < 0) {
     return true;
   } else {
     return false;

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { StockInterface } from './features/shared/model/stock-interface';
-import { StocksService } from './features/shared/services/stocks.service';
+import {Component} from '@angular/core';
+import {StockInterface} from './features/shared/model/stock-interface';
+import {StocksService} from './features/shared/services/stocks.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ export class AppComponent {
 
   constructor(service: StocksService) {
     service.load(['APPL']).subscribe(stocks => {
-this.stocks = stocks;
-});
+      this.stocks = stocks;
+    });
   }
 }
